@@ -32,33 +32,7 @@ jobs:
 
       run: mvn -B compile --file pom.xml
 
-  verify:
-
-    needs: build
-
-    runs-on: ubuntu-latest
-
-    steps:
-
-    - uses: actions/checkout@v3
-
-    - name: Set up JDK 14
-
-      uses: actions/setup-java@v3
-
-      with:
-
-        distribution: 'adopt'
-
-        java-version: 14
-
-    - name: Run all defined tests and generate war with Maven
-
-      run: mvn -B verify --file pom.xml
-
-    - run: ls ${GITHUB_WORKSPACE}/target/*.jar
-
-  verify-and-package:
+ verify-and-package:
 
     needs: build
 
@@ -108,4 +82,5 @@ jobs:
 
           push: true
 
-          tags: ghcr.io/jvelasc/tos:latest
+          tags: ghcr.io/JVelasc/tos:latest
+
