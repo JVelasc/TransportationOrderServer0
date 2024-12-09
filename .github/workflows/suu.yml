@@ -82,5 +82,5 @@ jobs:
 
           push: true
 
-          tags: ghcr.io/JVelasc/tos:latest
+          tags: ghcr.io/jvelasc/tos:latest
 
