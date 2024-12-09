@@ -121,7 +121,7 @@ jobs:
 
     - id: 'deployment-mypod'
 
-      run: 'kubectl create secret docker-registry github-registry --docker-server="ghcr.io" --docker-username="jorge velasco" --docker-password="${{ secrets.PAT }}" --docker-email="jorgevdm@gmail.com" -o yaml --dry-run=client | kubectl apply -f -'
+      run: 'kubectl create secret docker-registry github-registry --docker-server="ghcr.io" --docker-username="JVelasc" --docker-password="${{ secrets.PAT }}" --docker-email="jorge.velasco@alumnos.upm.es" -o yaml --dry-run=client | kubectl apply -f -'
 
     - run: 'kubectl apply -f deployment.yaml'
 
